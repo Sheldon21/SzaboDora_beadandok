@@ -6,7 +6,7 @@ def translate(s):
     szavak = s.split(" ")
     for index, szo in enumerate(szavak):
         ujszo = ""
-        szo = szo.strip(string.punctuation) #írásvégek leszedése
+        szo = szo.strip(string.punctuation) 
         ##----------------
 
         if len(szo) > 1:
@@ -21,7 +21,7 @@ def translate(s):
 
         eredmeny.append(ujszo)
 
-    return " ".join(eredmeny) + "." #lista elemeit összefűzve sztringgé
+    return " ".join(eredmeny) + "." 
 
 
 def backTranslate(s):
@@ -34,7 +34,7 @@ def backTranslate(s):
         szo = szo[:-2]     # leszedve "ay" végződést
 
         if index == 0:
-            ujszo = ujszo + szo[len(szo)-1].upper() #az első szó utolsó betűje->ez lesz a nagy kezdőbetű
+            ujszo = ujszo + szo[len(szo)-1].upper() 
         else:
             ujszo = ujszo + szo[len(szo)-1]
 
